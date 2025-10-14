@@ -31,7 +31,7 @@ O projeto foi construído seguindo os princípios de **Clean Architecture** e **
 * **Banco de Dados:** PostgreSQL
 * **IA & LangChain:**
     * **Orquestração:** Agente com Ferramentas (`AgentExecutor`).
-    * **Modelos:** OpenAI GPT-4 (para o raciocínio do agente) e GPT-3.5-Turbo (para a ferramenta de recomendação).
+    * **Modelos:** OpenAI GPT-5-nano.
     * **Geração de Imagem:** OpenAI DALL·E 3.
     * **Busca de Dados (RAG):** Embeddings da OpenAI com o banco de dados vetorial em memória FAISS.
 * **Containerização:** Docker e Docker Compose para um ambiente de desenvolvimento e produção consistente.
@@ -78,6 +78,19 @@ A aplicação está 100% funcional. Você pode acessar a documentação interati
 
 http://localhost:8000/docs
 
-## 5. CUso de IA no Desenvolvimento
+## 5. Uso de IA no Desenvolvimento
 
 Conforme solicitado no desafio, a IA foi utilizada como uma ferramenta estratégica durante o desenvolvimento.
+
+* **Ferramenta Principal:** Gemini (Google)
+* **Como foi Usada:** O Gemini atuou como um assistente de programação (pair programmer), ajudando a acelerar o desenvolvimento, depurar erros e refinar a arquitetura.
+* **Motivo da Escolha:** O Gemini, dentre os modelos de LLM, tem como diferencial sua enorme janela de contexto que favorece respostas coesas e favoráveis a tarefas extensas (como programação)
+
+### Exemplos de Prompts Utilizados
+
+
+* **Escolha da Stack:** "Irei desenvolver um chatbot para recomendação de tintas da marca Suvinil e suas posíveis aplicações. A linguagem adotada será o python 3.13. O banco de dados utilizado será o PostgreSQL. O LLM utilizado será o chatGPT da OpenAi. Utilizaremos RAG para buscar informações em um banco de dados PostgreSQL e fornecer recomendações precisas e contextuais. Seu trabalho será me fornecer uma lista de prós e contras da utilização dos frameworks Django, FastAPI e Flask Para a implementação do backend deste projeto."
+* **Sugestões de melhorias:** "Essa implementação provisória faz múltiplas consultas SQL para cada pergunta. Utilize o RAG + agente para fazer as buscas relevantes localmente através do banco de dados vetorial. Aplique um regex para reconhecer um padrão universal de URL ao invés de um texto fixo e sucetível a falhas"
+* **Geração de scripts auxiliares:** "Utilize a biblioteca pandas e sqlalchemy para realizar a leitura de um arquivo CSV e carregar os dados lidos para um banco de dados. Os dados do CSV devem ser organizados em um dataframe. Faça a leitura do banco de dados para garantir que duplicatas não sejam exportadas e devidamente ignoradas. Crie um objeto do tipo Paint e o adicione à sessão do banco de dados."
+* **Criação de Testes:** "Crie um script que simula o processo de criação e leitura de usuários e tintas diretamente no banco de dados para garantir que as funções crud e security operem como o esperado. O script deverá criar e salvar usuários no banco. Use assert para confirmar se os dados do usuário criado no banco são idênticos aos dados de entrada. Se uma verificação assert falhar, o script para imediatamente deve acusar um erro, indicando que o teste falhou. Verifique se o hash foi aplicado na senha antes de salvar no banco de dados e garantir que a senha original corresponde ao hash salvo. No final, o script removerá os dados inseridos no banco."
+* * **Depuração de erros:** Aqui utilizei prompts variados para sugerir correções a erros de execução que envolviam conflitos
