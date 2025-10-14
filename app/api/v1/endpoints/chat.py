@@ -17,6 +17,8 @@ def ask_question(
 ):
     """
     Endpoint para enviar perguntas ao assistente de IA (requer autenticação).
+    Pode retornar uma URL de imagem se uma simulação visual for solicitada.
     """
-    ai_answer = chat_service_instance.get_ai_response(query.question)
-    return {"answer": ai_answer}
+    response_data = chat_service_instance.get_ai_response(query.question)
+
+    return response_data
