@@ -112,7 +112,7 @@ password: Password123!
 - No corpo da requisição, faça uma pergunta.
 ```json
 {
-  "question": "Qual a melhor tinta para uma parede externa que seja resistente a água e ao mofo? me dê um exemplo em uma imagem de como ficaria"
+  "question": "Qual a melhor tinta para uma parede externa que seja resistente a água e ao mofo? Mostre em uma imagem como essa tinta ficaria em uma casa"
 }
 ```
 - Clique em "Execute". A resposta conterá a recomendação do assistente e, no segundo caso, uma image_url com a simulação visual gerada pelo DALL·E 3.
