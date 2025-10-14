@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class ChatQuery(BaseModel):
@@ -7,3 +8,4 @@ class ChatQuery(BaseModel):
 
 class ChatResponse(BaseModel):
     answer: str
+    image_url: Optional[str] = None
