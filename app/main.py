@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.v1.endpoints import users
+from app.api.v1.endpoints import users, auth, paints
 
 app = FastAPI(
     title="Catálogo Inteligente de Tintas com IA",
@@ -8,6 +8,8 @@ app = FastAPI(
 )
 
 app.include_router(users.router, prefix="/api/v1/users", tags=["Users"])
+app.include_router(auth.router, prefix="/api/v1/auth", tags=["Auth"])
+app.include_router(paints.router, prefix="/api/v1/paints", tags=["Paints"])
 
 
 @app.get("/")
