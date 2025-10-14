@@ -58,6 +58,9 @@ cd LOOMI-Backend-AI
 # Copie o arquivo de exemplo
 cp .env.example .env
 ```
+### IMPORTANTE
+
+Lembre-se de adicionar uma API key válida (somente da OpenAI) e de inserir uma senha forte no .env
 
 **3. Suba a Aplicação**
 ```bash
