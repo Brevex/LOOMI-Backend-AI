@@ -112,10 +112,14 @@ password: Password123!
 - No corpo da requisição, faça uma pergunta.
 ```json
 {
-  "question": "Qual a melhor tinta para uma parede interna que suja muito?"
+  "question": "Qual a melhor tinta para uma parede externa que seja resistente a água e ao mofo? me dê um exemplo em uma imagem de como ficaria"
 }
 ```
 - Clique em "Execute". A resposta conterá a recomendação do assistente e, no segundo caso, uma image_url com a simulação visual gerada pelo DALL·E 3.
+
+### IMPORTANTE
+
+Para poupar recursos, o sistema só irá gerar a imagem se for solicitado explicitamente 
 
 ## 6. Uso de IA no Desenvolvimento
 
