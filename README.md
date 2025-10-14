@@ -1,5 +1,3 @@
-# LOOMI-Backend-AI
-
 # Catálogo Inteligente de Tintas com IA
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
@@ -81,7 +79,45 @@ A aplicação está 100% funcional. Você pode acessar a documentação interati
 
 http://localhost:8000/docs
 
-## 5. Uso de IA no Desenvolvimento
+## 5. Como Testar a Aplicação (Swagger UI /docs)
+
+Após executar a aplicação, você pode testar todo o fluxo do usuário diretamente na documentação interativa.
+
+**Passo 1: Criar um Novo Usuário**
+- Vá para a seção Users e expanda o endpoint POST /api/v1/users
+- Clique em "Try it out".
+- No corpo da requisição (Request body), insira os dados do novo usuário:
+```json
+{
+  "email": "test@loomi.com",
+  "password": "Password123!",
+  "full_name": "Usuário de Teste"
+}
+```
+- Clique em "Execute". Você deve receber uma resposta 201 Created.
+
+**Passo 2: Autorizar o Acesso na Documentação**
+- Clique no botão "Authorize" no canto superior direito da página.
+- Preencha os campos com as credenciais que você acabou de criar:
+```bash
+username: test@loomi.com
+password: Password123!
+```
+- Clique em "Authorize" e feche a janela. O cadeado agora deve aparecer fechado.
+
+
+**Passo 3: Testar o Assistente de IA**
+- Vá para a seção Chat e expanda o endpoint POST /api/v1/chat.
+- Clique em "Try it out".
+- No corpo da requisição, faça uma pergunta.
+```json
+{
+  "question": "Qual a melhor tinta para uma parede interna que suja muito?"
+}
+```
+- Clique em "Execute". A resposta conterá a recomendação do assistente e, no segundo caso, uma image_url com a simulação visual gerada pelo DALL·E 3.
+
+## 6. Uso de IA no Desenvolvimento
 
 Conforme solicitado no desafio, a IA foi utilizada como uma ferramenta estratégica durante o desenvolvimento.
 
