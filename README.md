@@ -49,8 +49,8 @@ Com Docker e Docker Compose instalados, você pode subir toda a aplicação com 
 
 **1. Clone o Repositório**
 ```bash
-git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-cd seu-repositorio
+git clone https://github.com/Brevex/LOOMI-Backend-AI.git
+cd LOOMI-Backend-AI
 ```
 
 **2. Configure o Ambiente**
