@@ -1,10 +1,10 @@
 # Catálogo Inteligente de Tintas com IA
 
-![Python](https://img.shields.io/badge/Python-3.13-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.111-green.svg)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue.svg)
-![Docker](https://img.shields.io/badge/Docker-Powered-blue.svg)
-![OpenAI](https://img.shields.io/badge/OpenAI-GPT%20%26%20DALL--E%203-green.svg)
+<p align="center">
+  <a href="https://github.com/syvixor/skills-icons">
+	  <img src="https://skills.syvixor.com/api/icons?i=python,fastapi,postgresql,docker" alt="Skills">
+  </a>
+</p>
 
 ## 1. Introdução
 
